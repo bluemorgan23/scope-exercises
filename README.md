@@ -1,0 +1,1 @@
+## Scope Exercises: C is for Cookie, Conjunction Function, Mod Squad, Simon Says
