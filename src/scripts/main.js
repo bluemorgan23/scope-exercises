@@ -12,3 +12,16 @@ for (let x = 0; x < cookies.length; x++) {
     console.log(`Mmmmmmm... that's a good ${currentCookie} cookie`);
 }
 
+//Conjunction Function
+//This code was initially saying that conjoinedWord was undefined because 
+//the variable was defined inside the function. When we try to call the variable
+//with console.log(coinjoinedWord), it couldn't access this variable because of scope.
+//To fix this issue, I defined conjoinedWord outside of the function expression, and also
+//changed const to let in this definitian.
+let conjoinedWord = "";
+const conjunction = function (firstWord, secondWord) {
+    conjoinedWord = `${firstWord} ${secondWord}`
+};
+
+conjunction("Master", "Card");
+console.log(conjoinedWord);
