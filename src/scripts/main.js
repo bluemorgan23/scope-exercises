@@ -54,3 +54,33 @@ let HTMLRepresentation = `<h1>The Mod Squad</h1>`;
 
 document.querySelector(".show-info").innerHTML = HTMLRepresentation;
 
+//Simon Says Exercise
+// Error says invalidLocation is not defined.
+// Removed the second if statement because it was redundant. Created a new
+// var i to be the counter for invalid locations. Defined invalid location outside the 
+// for loop and set it equal to true. Since all currentLocation[0] are 
+// less than or equal to 2, there are 0 invalid locations. If you change
+// a currentLocation[0] to anything over 2, the program will say "This location is invalid"
+// in the console and will also add 1 to the counter, which will be displayed to the console
+// with the last statement
+
+const locations = [[1,1], [1,2], [1,3], [2,1], [2,2], [2,3]];
+let invalidLocation = true;
+let i = 0;
+
+for (let k = 0; k < locations.length; k++) {
+    const currentLocation = locations[k];
+
+    if (currentLocation[0] > 2) {
+        invalidLocation = true;
+        console.log("This location is invalid")
+        i++;
+    } 
+}
+
+/*
+    Since k is used as the loop counter, it will be the
+    total number of locations, not the invalid ones. You
+    need to fix this somehow.
+*/
+console.log(`There were ${i} invalid locations`);
