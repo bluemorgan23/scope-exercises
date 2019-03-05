@@ -18,6 +18,7 @@ for (let x = 0; x < cookies.length; x++) {
 //with console.log(coinjoinedWord), it couldn't access this variable because of scope.
 //To fix this issue, I defined conjoinedWord outside of the function expression, and also
 //changed const to let in this definitian.
+
 let conjoinedWord = "";
 const conjunction = function (firstWord, secondWord) {
     conjoinedWord = `${firstWord} ${secondWord}`
@@ -25,3 +26,31 @@ const conjunction = function (firstWord, secondWord) {
 
 conjunction("Master", "Card");
 console.log(conjoinedWord);
+
+//Mod Squad
+//Added a comma after the array for "members" key.
+//The code displayed an error saying missing initializer on line 51
+//Moved the initalizing of HTMLRepresentation to the outside of the block
+//in order to be accessed by the final statement. Changed const to let
+//Added a <section> element with class "show-info" to index.html
+
+let HTMLRepresentation = `<h1>The Mod Squad</h1>`;
+
+{
+    const ModSquad = {
+        "members": ["Pete Cochran", "Linc Hayes", "Julie Barnes", "Capt. Adam Greer", "Chief Barney Metcalf"],
+        "series": {
+            "start": "1968",
+            "end": "1973"
+        }
+    };
+
+    
+
+    ModSquad.members.forEach(member => {
+        HTMLRepresentation += `<div>${member}</div>`;
+    })
+}
+
+document.querySelector(".show-info").innerHTML = HTMLRepresentation;
+
